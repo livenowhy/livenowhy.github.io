@@ -1,4 +1,4 @@
-FROM index.boxlinker.com/library/alpine-node:latest
+FROM registry.cn-hangzhou.aliyuncs.com/livenowhy/node:alpine
 
 MAINTAINER liuzhangpei liuzhangpei@126.com
 

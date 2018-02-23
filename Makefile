@@ -1,9 +1,11 @@
 all: deploy
 
 # 生成镜像
-TAG = latest
-PREFIX = index.boxlinker.com
-IMAGE_NAME = liuzhangpei/hexo
+TAG = hexo
+PREFIX = registry.cn-hangzhou.aliyuncs.com
+IMAGE_NAME = livenowhy/node
+
+
 
 
 
@@ -42,7 +44,7 @@ rundocker:
 
 
 
-#  index.boxlinker.com/liuzhangpei/hexo:latest
+#  registry.cn-hangzhou.aliyuncs.com/livenowhy/hexo:latest
 
 
 
