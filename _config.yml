@@ -2,19 +2,28 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Site
-title: Hexo
+# Site  站点信息配置
+title: coding
 subtitle:
 description:
-author: John Doe
-language:
+author: livenowhy
+language: zh-Hans
+email: livenowhy@126.com
 timezone:
 
+# add lzp baidu_analytics
+baidu_analytics: a499b2a374a531f4770195b199c7e342
+# add lzp Local Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://blog.livenowhy.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: posts/:category/:year-:month-:day/:title.html
 permalink_defaults:
 
 # Directory
@@ -27,8 +36,17 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
+# Archives
+## 2: Enable pagination        #启用分页
+## 1: Disable pagination    #不启用分页
+## 0: Fully Disable            #完全不可见
+archive: 1
+category: 1
+tag: 1
+
 # Writing
 new_post_name: :title.md # File name of new posts
+#default_layout: post
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
@@ -55,6 +73,10 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+    programming: programming
+    linux: linux
+    golang: golang
+
 tag_map:
 
 # Date / Time format
@@ -72,9 +94,12 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+#theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@livenowhy.github.com:livenowhy/livenowhy.github.io.git
+  branch: master
